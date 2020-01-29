@@ -1,0 +1,107 @@
+<div class="container">
+<%=form_with model:@student,local: true do |f| %>
+    <p> 
+        <%= f.label :Firstname%><br/>
+        <%= f.text_field :firstname ,placeholder: "eg.Urmit"%> 
+        <%if @student.errors[:firstname].any?%>
+        <%=@student.errors[:firstname]%>
+        <%end%>
+    </p>
+
+    <p> 
+        <%= f.label :Laststname%><br/>
+        <%= f.text_field :lastname ,placeholder: "eg.Prajapati"%>
+        <%if @student.errors[:lastname].any?%>
+         <%=@student.errors[:lastname]%>
+         <%end%>
+    </p>
+
+    <p> 
+        <%= f.label :Email%><br/>
+        <%= f.email_field :email ,placeholder: "eg.urmit@gmail.com"%>
+        <%if @student.errors[:email].any?%>
+        <%=@student.errors[:email]%>
+        <%end%>
+    </p>
+
+    <p> 
+        <%= f.label :Age%><br/>
+        <%= f.number_field :age ,placeholder: "eg.21"%>
+        <%if @student.errors[:age].any?%>
+        <%=@student.errors[:age]%>
+        <%end%>
+    </p>
+
+    <p> 
+        <%= f.label :Degree%><br/>
+        <%= f.text_field :degree ,placeholder: "eg.B.E"%>
+    </p>
+
+    <p> 
+        <%= f.label :completed_year%><br/>
+        <%= f.text_field :yearcompleted ,placeholder: "eg.yy-mm-dd"%>
+    </p>
+
+    <p> 
+        <%= f.label :companyname%><br/>
+        <%= f.text_field :companyname ,placeholder: "eg.bacancy pvt. limited"%>
+    </p>
+
+    <p> 
+        <%= f.label :Username%><br/>
+        <%= f.text_field :username ,placeholder: "eg.urmit3"%>
+    </p>
+
+    <p> 
+        <%= f.label :Website%><br/>
+        <%= f.url_field :website ,placeholder: "eg.www.helloworld.com"%>
+    </p>
+
+    <p> 
+        <%= f.label :Addressline1%><br/>
+        <%= f.text_field :address_line1 ,placeholder: "eg.your home address"%>
+    </p>
+     
+     <p> 
+        <%= f.label :Addressline2%><br/>
+        <%= f.text_field :address_line2 ,placeholder: "eg.your home address"%>
+    </p>
+
+     <p> 
+        <%= f.label :City%><br/>
+        <%= f.select(:city,options_for_select([['Ahmedabad','Ahmedabad'],
+        ['Surat','Surat'],['Rajkot','Rajkot'] ] ))%>
+    </p>
+
+     <p> 
+        <%= f.label :State%><br/>
+        <%= f.text_field :state ,placeholder: "eg.gujrat"%>
+    </p>
+     
+     <p> 
+        <%= f.label :Zipcode%><br/>
+        <%= f.number_field :zipcode ,placeholder: "eg.380001"%>
+    </p>
+     
+     <p> 
+        <%= f.label :Password%><br/>
+        <%= f.text_field :password ,placeholder: "eg.846urmiT@"%>
+        <%if @student.errors[:password].any?%>
+        <%=@student.errors[:password]%>
+        <%end%>
+    </p>
+
+     <p> 
+        <%= f.label :Confrim_password%><br/>
+        <%= f.text_field :password_confirmation%>
+         <%if @student.errors[:password_confirmation].any?%>
+        <%=@student.errors[:password_confirmation]%>
+        <%end%>
+    </p>
+
+     <p> 
+        <%= f.submit "Register"%>
+    </p>
+
+<%end%>
+</div>
