@@ -8,13 +8,13 @@
         <%end%>
     </h1>
 
-    <p> 
+    <h3> 
         <%= f.label :Laststname%><br/>
         <%= f.text_field :lastname ,placeholder: "eg.Prajapati"%>
         <%if @student.errors[:lastname].any?%>
          <%=@student.errors[:lastname]%>
          <%end%>
-    </p>
+    </h3>
 
     <p> 
         <%= f.label :Email%><br/>
