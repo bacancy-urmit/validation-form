@@ -9,12 +9,14 @@
     </h1>
 
     <h3> 
+    <h2> 
         <%= f.label :Laststname%><br/>
         <%= f.text_field :lastname ,placeholder: "eg.Prajapati"%>
         <%if @student.errors[:lastname].any?%>
          <%=@student.errors[:lastname]%>
          <%end%>
     </h3>
+    </h2>
 
     <p> 
         <%= f.label :Email%><br/>
