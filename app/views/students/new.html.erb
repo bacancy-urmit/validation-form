@@ -1,12 +1,12 @@
 <div class="container">
 <%=form_with model:@student,local: true do |f| %>
-    <p> 
+    <h1> 
         <%= f.label :Firstname%><br/>
         <%= f.text_field :firstname ,placeholder: "eg.Urmit"%> 
         <%if @student.errors[:firstname].any?%>
         <%=@student.errors[:firstname]%>
         <%end%>
-    </p>
+    </h1>
 
     <p> 
         <%= f.label :Laststname%><br/>
